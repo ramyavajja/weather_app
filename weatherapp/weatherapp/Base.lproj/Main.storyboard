@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="az4-w3-APY">
+                                <rect key="frame" x="16" y="49" width="343" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-Jl-X5e">
+                                <rect key="frame" x="16" y="107" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAF-po-0Ew">
+                                <rect key="frame" x="16" y="157" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prB-Rf-T2Q">
+                                <rect key="frame" x="16" y="225" width="343" height="36"/>
+                                <state key="normal" title="Set City"/>
+                                <connections>
+                                    <action selector="setCityTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UnU-tv-Ttj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAX-6S-c7G">
+                                <rect key="frame" x="0.0" y="396" width="359" height="30"/>
+                                <state key="normal" title="City"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="13n.png" translatesAutoresizingMaskIntoConstraints="NO" id="wLb-Ye-ihM">
+                                <rect key="frame" x="59" y="179" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yhj-Jl-X5e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6oS-rM-omo"/>
+                            <constraint firstItem="wLb-Ye-ihM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="58" id="D8p-ns-8Zy"/>
+                            <constraint firstItem="yhj-Jl-X5e" firstAttribute="top" secondItem="az4-w3-APY" secondAttribute="bottom" constant="26" id="DQa-zC-Eg4"/>
+                            <constraint firstItem="prB-Rf-T2Q" firstAttribute="top" secondItem="vAF-po-0Ew" secondAttribute="bottom" constant="39" id="FTr-W4-NaH"/>
+                            <constraint firstItem="vAF-po-0Ew" firstAttribute="top" secondItem="yhj-Jl-X5e" secondAttribute="bottom" constant="21" id="J2n-u0-2vG"/>
+                            <constraint firstItem="prB-Rf-T2Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NN3-bq-TtB"/>
+                            <constraint firstItem="az4-w3-APY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="29" id="QDJ-U3-HEg"/>
+                            <constraint firstItem="vAF-po-0Ew" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="QVu-Hl-vOg"/>
+                            <constraint firstAttribute="trailing" secondItem="eAX-6S-c7G" secondAttribute="trailing" constant="16" id="R4R-9v-3ep"/>
+                            <constraint firstItem="prB-Rf-T2Q" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="W8m-xL-bzI"/>
+                            <constraint firstItem="az4-w3-APY" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Y9k-DX-otZ"/>
+                            <constraint firstItem="wLb-Ye-ihM" firstAttribute="top" secondItem="vAF-po-0Ew" secondAttribute="bottom" constant="-7" id="dBl-mO-LxN"/>
+                            <constraint firstItem="az4-w3-APY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="e1l-cp-Wjs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wLb-Ye-ihM" secondAttribute="trailing" constant="45" id="f4M-ba-aRo"/>
+                            <constraint firstItem="vAF-po-0Ew" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hap-Kj-yrd"/>
+                            <constraint firstItem="eAX-6S-c7G" firstAttribute="top" secondItem="prB-Rf-T2Q" secondAttribute="bottom" constant="49" id="ir4-S8-PRR"/>
+                            <constraint firstItem="yhj-Jl-X5e" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="o5z-ZW-nSL"/>
+                            <constraint firstItem="eAX-6S-c7G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pKU-SQ-KCy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cityButton" destination="eAX-6S-c7G" id="o4p-pg-xFR"/>
+                        <outlet property="city_label" destination="vAF-po-0Ew" id="LNm-oI-z4k"/>
+                        <outlet property="description_label" destination="yhj-Jl-X5e" id="zxI-cH-LlN"/>
+                        <outlet property="iconImage" destination="wLb-Ye-ihM" id="Zaz-gP-pI4"/>
+                        <outlet property="temp_label" destination="az4-w3-APY" id="Zh4-xe-Ffl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="13n.png" width="50" height="50"/>
+    </resources>
+</document>
